@@ -7,7 +7,7 @@ FROM resin/rpi-raspbian
 # use apt-get if you need to install dependencies,
 # for instance if you need ALSA sound utils, just uncomment the lines below.
 RUN apt-get update && apt-get install -yq \
-    omxplayer rplay-client && \
+    omxplayer rplay-client libraspberrypi0 libraspberrypi-dev libraspberrypi-doc libraspberrypi-bin && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Defines our working directory in container
