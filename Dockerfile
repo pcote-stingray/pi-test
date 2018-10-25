@@ -11,10 +11,7 @@ RUN apt-get update && apt-get install -yq \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Defines our working directory in container
-WORKDIR /usr/src/app
-
-# Copies the package.json first for better cache on later pushes
-COPY package.json package.json
+#WORKDIR /usr/src/app
 
 # This install npm dependencies on the resin.io build server,
 # making sure to clean up the artifacts it creates in order to reduce the image size.
